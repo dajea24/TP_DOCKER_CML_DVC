@@ -13,13 +13,13 @@ jobs:
 
           # Your ML workflow goes here
           pip install -r requirements.txt
-          python train.py
+          python 01_prod_regression_ci__tutorial.py
           
           echo "## MODEL METRICS" >> report.md
           cat metrics.txt >> report.md
           
-          echo "## DataViz" >> report.md
-          cml-publish features_importance.png --md >> report.md
-          cml-publish residual.png >> report.md
+          # echo "## DataViz" >> report.md
+          # cml-publish features_importance.png --md >> report.md
+          # cml-publish residual.png >> report.md
           
           cml-send-comment report.md
