@@ -12,3 +12,5 @@ jobs:
            run: |
               pip install -r requirements.txt
               python 01_prod_regression_ci__tutorial.py
+              echo "MODEL METRICS"
+              cat metrics.txt
