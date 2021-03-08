@@ -1,4 +1,4 @@
-name: train-my-model
+name: model-regression
 on: [push]
 jobs:
   run:
