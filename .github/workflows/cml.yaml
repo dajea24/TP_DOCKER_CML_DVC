@@ -1,18 +1,25 @@
-name: model-regression
+name: model-classification
 on: [push]
 jobs:
   run:
-     runs-on: [ubuntu-latest]
-     container: docker://dvcorg/cml-py3:latest
-     steps:
-        - uses: actions/checkout@v2
-        - name: cml_run
-           env:
-              repo_token: ${{ secrets.GITHUB_TOKEN }}
-           run: |
-              pip install -r requirements.txt
-              python 01_prod_regression_ci__tutorial.py
-              echo "### Model Metrics" >> report.md
-              cat metrics.txt >> report.md
-              
-              cml-send-comment report.md
+    runs-on: [ubuntu-latest]
+    container: docker://dvcorg/cml-py3:latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: cml_run
+        env:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+
+          # Your ML workflow goes here
+          pip install -r requirements.txt
+          python train.py
+          
+          echo "## MODEL METRICS" >> report.md
+          cat metrics.txt >> report.md
+          
+          echo "## DataViz" >> report.md
+          cml-publish features_importance.png --md >> report.md
+          cml-publish residual.png >> report.md
+          
+          cml-send-comment report.md
