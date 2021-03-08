@@ -1,4 +1,4 @@
-name: train-my-model
+name: model-advertising-regression
 on: [push]
 jobs:
   run:
@@ -7,8 +7,11 @@ jobs:
      steps:
         - uses: actions/checkout@v2
         - name: cml_run
-           env:
-              repo_token: ${{ secrets.GITHUB_TOKEN }}
-           run: |
+          env:
+            repo_token: ${{ secrets.GITHUB_TOKEN }}
+          run:
               pip install -r requirements.txt
               python 01_prod_regression_ci__tutorial.py
+              
+              echo "MODEL METRICS"
+              cat metrics.txt
