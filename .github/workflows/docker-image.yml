@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag git_cml:$(20200308 +%s)
+      run: docker build . --file Dockerfile --tag cmlgithub:$(20200308 +%s)
