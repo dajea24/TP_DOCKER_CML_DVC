@@ -20,6 +20,14 @@ from sklearn import metrics
 
 
 # In[60]:
+# #############################################################################
+# Load directory paths for persisting model and metadata
+
+MODEL_DIR = os.environ["MODEL_DIR"]
+MODEL_FILE = os.environ["MODEL_FILE"]
+METADATA_FILE = os.environ["METADATA_FILE"]
+MODEL_PATH = os.path.join(MODEL_DIR, MODEL_FILE)
+METADATA_PATH = os.path.join(MODEL_DIR, METADATA_FILE)
 
 
 # lire le fichier de données
@@ -174,6 +182,14 @@ with open("metrics.txt", 'w') as outfile:
 
 
 # In[73]:
+# #############################################################################
+# Serialize model and metadata
+print("Serializing model to: {}".format(MODEL_PATH))
+dump(lm, MODEL_PATH)
+
+print("Serializing metadata to: {}".format(METADATA_PATH))
+with open(METADATA_PATH, 'w') as outfile:  
+    json.dump(metadata, outfile)
 
 
 #Référence: The Elements of Statistical Learning - Hastie, Tibshirani and Friedman, voir https://web.stanford.edu/~hastie/ElemStatLearn/
