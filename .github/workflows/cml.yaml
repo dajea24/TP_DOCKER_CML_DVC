@@ -1,4 +1,4 @@
-name: model-linear-regression
+name: model-linear-regression2
 on: [push]
 jobs:
   run:
