@@ -164,9 +164,6 @@ test_pred_df[0:10]
 
 # In[71]:
 
-
-
-
 # RMSE
 mse = np.sqrt(metrics.mean_squared_error(y_test,
                                         y_pred))
