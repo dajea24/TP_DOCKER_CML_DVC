@@ -1,5 +1,4 @@
 FROM jupyter/scipy-notebook
-MAINTAINER David Jeannette // modified from coursera.org
 
 RUN pip install joblib
 
