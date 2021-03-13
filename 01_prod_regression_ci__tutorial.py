@@ -29,11 +29,11 @@ from sklearn import metrics
 # #############################################################################
 # Load directory paths for persisting model and metadata
 
-MODEL_DIR = os.environ["MODEL_DIR"]
-MODEL_FILE = os.environ["MODEL_FILE"]
-METADATA_FILE = os.environ["METADATA_FILE"]
-MODEL_PATH = os.path.join(MODEL_DIR, MODEL_FILE)
-METADATA_PATH = os.path.join(MODEL_DIR, METADATA_FILE)
+#MODEL_DIR = os.environ["MODEL_DIR"]
+#MODEL_FILE = os.environ["MODEL_FILE"]
+#METADATA_FILE = os.environ["METADATA_FILE"]
+#MODEL_PATH = os.path.join(MODEL_DIR, MODEL_FILE)
+#METADATA_PATH = os.path.join(MODEL_DIR, METADATA_FILE)
 
 
 # lire le fichier de données
