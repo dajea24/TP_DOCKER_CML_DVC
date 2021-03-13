@@ -10,10 +10,15 @@
 
 
 # modules nécessaires pour le notebook
+import json
+import os
+
+from joblib import dump
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-#import os
+
 from sklearn.linear_model import LinearRegression
 from sklearn import model_selection
 from sklearn import metrics
