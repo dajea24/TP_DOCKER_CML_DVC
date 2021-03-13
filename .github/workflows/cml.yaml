@@ -1,4 +1,4 @@
-name: model-supervisé RL
+name: model-supervisé RL2
 on: [push]
 jobs:
   runame: model-supervisé RL
