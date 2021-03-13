@@ -191,8 +191,8 @@ with open("metrics.txt", 'w') as outfile:
 #dump(lm, MODEL_PATH)
 
 # print("Serializing metadata to: {}".format(METADATA_PATH))
-#with open(METADATA_PATH, 'w') as outfile:  
- #json.dump(metadata, outfile)
+with open(METADATA_PATH, 'w') as outfile:  
+ json.dump(metadata, outfile)
 
 
 #Référence: The Elements of Statistical Learning - Hastie, Tibshirani and Friedman, voir https://web.stanford.edu/~hastie/ElemStatLearn/
