@@ -17,9 +17,6 @@ jobs:
           pip install -r requirements.txt
           python 01_prod_regression_ci__tutorial.py
           
-          ls -l
-          docker ps
-          
           # Write your CML report
           echo "## Metriques:" >> report.md
           cat metrics.txt >> report.md
