@@ -1,2 +1,2 @@
-# dev_github_cml
+# MLOps A57 Course: GitHub-CML
  
