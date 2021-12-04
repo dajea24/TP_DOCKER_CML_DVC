@@ -22,7 +22,7 @@ import seaborn as sns
 from sklearn.linear_model import LinearRegression
 from sklearn import model_selection
 from sklearn import metrics
- 
+
 
 
 # In[60]:
@@ -117,8 +117,8 @@ y = df.sales
 
 
 #Effectuer la séparation Training-Test
- 
- 
+
+
 X_train, X_test, y_train, y_test = model_selection.train_test_split(X, 
                                         y , test_size = 0.2, random_state=42)
 #detail de chacun des sous-dataset
@@ -159,7 +159,7 @@ import numpy as np
 test_pred_df = pd.DataFrame( { 'Valeurs test': y_test,
                 'Valeurs prédites': np.round( y_pred, 2),
                 'residuels': y_test - y_pred } )
-test_pred_df[0:10]
+test_pred_df[:10]
 
 
 # In[71]:
